@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel should render correctly 1`] = `
+<div>
+  <Carousel__PhotoContainer>
+    <Photo
+      index={0}
+    />
+    <AlbumPhotoCount />
+  </Carousel__PhotoContainer>
+  <Carousel__PhotostripWrapper>
+    <CarouselPhotostrip
+      className="photostrip"
+      index={0}
+      onClick={[Function]}
+    />
+  </Carousel__PhotostripWrapper>
+</div>
+`;
