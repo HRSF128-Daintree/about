@@ -128,5 +128,5 @@ const Photo = mongoose.model('Photo', photoSchema);
 
 module.exports = {
   db,
-  Photo,
+  Photo
 };
