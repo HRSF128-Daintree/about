@@ -2,18 +2,18 @@
 
 > Project description
 
->API REQUESTS AND ENDPOINTS
-GET: '/api/photos/:hotelId'
-POST: '/api/photos/:hotelId', hotel object in request body
-PUT: '/api/photos/:hotelId', update object in request body
-DELETE: '/api/photos/:hotelId'
+> API Documentation
+  - GET: '/api/photos/:hotelId'
+  - POST: '/api/photos/:hotelId', hotel object in request body
+  - PUT: '/api/photos/:hotelId', update object in request body
+  - DELETE: '/api/photos/:hotelId'
+  - More information on these API calls in API-Doc.md in server directory.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/HRSF128-Daintree/jin-carousel
+  - https://github.com/HRSF128-Daintree/reviews2
+  - https://github.com/HRSF128-Daintree/erik-calendar
 
 ## Table of Contents
 

@@ -17,7 +17,7 @@ const addPhotos = (req, res) => {
     if (error) {
       res.status(404).send(error);
     } else {
-      res.status(200).send(data);
+      res.status(201).send(data);
     }
   });
 }
@@ -29,7 +29,7 @@ const updatePhotos = (req, res) => {
     if (error) {
       res.status(404).send(error);
     } else {
-      res.status(200).send(data);
+      res.status(204).send(data);
     }
   });
 }
@@ -41,7 +41,7 @@ const deletePhotos = (req, res) => {
     if (error) {
       res.status(404).send(error);
     } else {
-      res.status(200).send(data);
+      res.status(204).send(data);
     }
   });
 }
