@@ -2,6 +2,12 @@
 
 > Project description
 
+>API REQUESTS AND ENDPOINTS
+GET: '/api/photos/:hotelId'
+POST: '/api/photos/:hotelId', hotel object in request body
+PUT: '/api/photos/:hotelId', update object in request body
+DELETE: '/api/photos/:hotelId'
+
 ## Related Projects
 
   - https://github.com/teamName/repo
