@@ -256,7 +256,7 @@
 **Request Body**: Expects JSON with any of the following keys (include only keys to be updated)
 
 ```json
-        {
+    {
       "hotelId": "Number",
       "hotelName": "String",
       "hotelCity": "String",
