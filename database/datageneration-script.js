@@ -1,57 +1,6 @@
 const fs = require('fs');
 const faker = require('faker');
 
-const generateHotels = (start = 1, end = 2) => {
-  const hotels = [];
-  for (let hotelId = start; hotelId <= end; hotelId++) {
-    const hotel = {
-      hotelId,
-      hotelName: faker.company.companyName(),
-      hotelCity: faker.address.city(),
-      hotelPrice: faker.random.number(1000),
-      numReviews: faker.random.number(1000) + 50,
-    };
-    hotels.push(hotel);
-  }
-  return hotels;
-};
-
-const generateUsers = (start = 1, end = 2) => {
-  const users = [];
-  for (let userId = start; userId <= end; userId++) {
-    const user = {
-      userId,
-      user: faker.name.findName(),
-      userAvatarUrl: faker.image.avatar(),
-      locationCity: faker.address.city(),
-      locationState: faker.address.stateAbbr(),
-      contributions: faker.random.number(400),
-    };
-    users.push(user);
-  }
-  return users;
-};
-
-const generatePhotos = (start = 1, end = 2) => {
-  const photos = [];
-  for (let photoId = start; photoId <= end; photoId++) {
-    const captions = ['', faker.lorem.words(), faker.lorem.sentence()];
-    const categories = ['Room & Suite', 'Dining', 'Pool & Beach', 'Gym', 'Hotel & Amenities', 'Bathroom', 'Business Center & Event Rooms', 'View from Room'];
-    const photo = {
-      photoId,
-      imageUrl: faker.image.image(),
-      category: categories[faker.random.number(7)],
-      datePosted: faker.date.recent(90),
-      caption: captions[faker.random.number(2)],
-      helpfulVotes: faker.random.number(200),
-      hotelId: faker.random.number(9999) + 1,
-      userId: faker.random.number(9999) + 1
-    };
-    photos.push(photo);
-  }
-  return photos;
-};
-
 const writeHotels = (end = 2) => {
   const hotelHeaders = ['hotelId', 'hotelName', 'hotelCity', 'hotelPrice', 'numReviews'];
   fs.writeFileSync('./data/hotels.csv', hotelHeaders.join(',') + '\n');
