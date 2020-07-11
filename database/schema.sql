@@ -1,7 +1,7 @@
 /*  Execute this file from the root directory in the command line by typing:
  *    mysql -u root -p < database/schema.sql
  *  to create the database and the tables. */
-
+DROP DATABASE IF EXISTS daintree;
 CREATE DATABASE daintree;
 
 USE daintree;
@@ -39,3 +39,7 @@ CREATE TABLE photos (
   FOREIGN KEY (userId)
     REFERENCES users (userId)
 );
+
+-- LOAD DATA LOCAL INFILE '/Volumes/Elements/users1.csv' INTO TABLE users FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+-- LOAD DATA LOCAL INFILE '/Volumes/Elements/hotels1.csv' INTO TABLE hotels FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+-- LOAD DATA LOCAL INFILE '/Volumes/Elements/photos1.csv' INTO TABLE photos FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
