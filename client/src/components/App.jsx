@@ -123,15 +123,40 @@ class App extends React.Component {
     })
       .then((response) => {
         const hotel = response.data[0];
+        console.log(hotel);
         const preview = [
-          hotel.roomAlbum[0],
-          hotel.diningAlbum[0],
-          hotel.poolAlbum[0],
-          hotel.gymAlbum[0],
-          hotel.bathroomAlbum[0],
-          hotel.eventRoomAlbum[0],
-          hotel.roomViewAlbum[0],
+          // hotel.roomAlbum[0],
+          // hotel.diningAlbum[0],
+          // hotel.poolAlbum[0],
+          // hotel.gymAlbum[0],
+          // hotel.bathroomAlbum[0],
+          // hotel.eventRoomAlbum[0],
+          // hotel.roomViewAlbum[0],
         ];
+        if (hotel.roomAlbum.length > 0) {
+          preview.push(hotel.roomAlbum[0]);
+        }
+        if (hotel.diningAlbum.length > 0) {
+          preview.push(hotel.diningAlbum[0]);
+        }
+        if (hotel.poolAlbum.length > 0) {
+          preview.push(hotel.poolAlbum[0]);
+        }
+        if (hotel.gymAlbum.length > 0) {
+          preview.push(hotel.gymAlbum[0]);
+        }
+        if (hotel.amenitiesAlbum.length > 0) {
+          preview.push(hotel.amenitiesAlbum[0]);
+        }
+        if (hotel.bathroomAlbum.length > 0) {
+          preview.push(hotel.bathroomAlbum[0]);
+        }
+        if (hotel.eventRoomAlbum.length > 0) {
+          preview.push(hotel.eventRoomAlbum[0]);
+        }
+        if (hotel.roomViewAlbum.length > 0) {
+          preview.push(hotel.roomViewAlbum[0]);
+        }
         // console.log('res data', response.data);
         // console.log('1st hotel record', hotel);
         this.setState({
