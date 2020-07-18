@@ -123,7 +123,6 @@ class App extends React.Component {
     })
       .then((response) => {
         const hotel = response.data[0];
-        console.log(hotel);
         const preview = [
           // hotel.roomAlbum[0],
           // hotel.diningAlbum[0],

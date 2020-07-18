@@ -3,7 +3,7 @@ const db = require('../database');
 const query = Promise.promisify(db.query).bind(db);
 
 const getPhotos = async (id, callback) => {
-  const rows = await query(`SELECT * FROM photos INNER JOIN hotels ON photos.hotelId = hotels.hotelId INNER JOIN users ON photos.userId = users.userId WHERE photos.hotelId = ${id}`);
+  const rows = await query(`SELECT photos.photoId, photos.imageUrl, photos.category, photos.datePosted, photos.caption, photos.helpfulVotes, hotels.hotelId, hotels.hotelName, hotels.hotelCity, hotels.hotelPrice, hotels.numReviews, users.userId, users.user, users.userAvatarUrl, users.locationCity, users.locationState, users.contributions FROM photos INNER JOIN hotels ON photos.hotelId = hotels.hotelId INNER JOIN users ON photos.userId = users.userId WHERE photos.hotelId = ${id}`);
   const photos = rows;
   photos.forEach(photo => {
     photo.location = `${photo.locationCity}, ${photo.locationState}`;
